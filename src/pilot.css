@@ -1,0 +1,96 @@
+.pilot-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  margin: 22px 0 12px;
+  padding: 22px 26px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+}
+.pilot-intro p { font-size: .84rem; max-width: 660px; margin: 0; }
+.pilot-intro label, .session-picker, .reflection label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: .76rem;
+  font-weight: 600;
+}
+.pilot-intro input, .reflection input, .reflection textarea {
+  border: 1px solid #cfc6db;
+  background: var(--paper);
+  color: var(--ink);
+  padding: 10px 12px;
+  font: inherit;
+  border-radius: 8px;
+  min-height: 44px;
+}
+.pilot-week { margin: 36px 0; }
+.pilot-week > h3 { display: flex; justify-content: space-between; gap: 16px; align-items: center; }
+.pilot-week > h3 small { font: 600 .7rem 'Manrope', sans-serif; color: var(--muted); }
+.session-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.session-card {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 25px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+}
+.session-card.is-complete { border-color: #b4c8b7; }
+.session-card-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; width: 100%; }
+.session-card h4 { font: 500 1.6rem/1.2 'Fraunces', serif; margin: 15px 0; }
+.session-card p { font-size: .81rem; color: var(--muted); }
+.session-card .button { margin-top: auto; }
+.session-meta { display: flex; gap: 14px; flex-wrap: wrap; margin: 0 0 17px; font-size: .7rem; }
+.session-meta span, .availability-note { display: flex; align-items: center; gap: 6px; }
+.session-card .availability-note { font-size: .73rem; color: #76532f; }
+.session-card .availability-note.ready { color: var(--green); }
+.session-picker { margin: 30px 0 22px; }
+.session-picker select { width: 100%; }
+.diagnostic-results { border: 1px solid var(--line); padding: 26px; border-radius: 14px; background: var(--paper); }
+.diagnostic-results > p { font-size: .85rem; }
+.diagnosis-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 13px; margin: 23px 0; }
+.diagnosis-grid article { background: #f1edf5; padding: 16px; border-radius: 9px; }
+.diagnosis-grid strong { font-size: .82rem; }
+.diagnosis-grid p { font-size: .78rem; margin: 7px 0; }
+.diagnosis-grid small { color: var(--muted); font-size: .68rem; }
+.reflection { border-top: 1px solid var(--line); padding-top: 24px; margin: 28px 0; }
+.reflection-fields { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0; }
+.reflection-fields label { justify-content: space-between; min-width: 0; }
+.reflection-field { display: flex; flex-direction: column; justify-content: space-between; gap: 8px; min-width: 0; }
+.reflection input, .reflection select { width: 100%; }
+.reflection textarea { width: 100%; resize: vertical; }
+.user-note { white-space: pre-wrap; overflow-wrap: anywhere; }
+.curriculum-area { margin: 15px 0; padding: 22px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); }
+.curriculum-area > summary { cursor: pointer; display: flex; justify-content: space-between; gap: 20px; align-items: center; }
+.curriculum-area > summary > span:first-child { display: flex; flex-direction: column; gap: 5px; }
+.curriculum-area summary small { color: var(--purple); font-size: .64rem; }
+.curriculum-area summary strong { font-size: .9rem; }
+.curriculum-area > p { font-size: .82rem; margin-top: 20px; }
+.curriculum-area a { font-size: .76rem; }
+.requirement { border-top: 1px solid var(--line); margin-top: 20px; padding-top: 20px; }
+.requirement h3 { font-size: 1.2rem; }
+.requirement > p { font-size: .8rem; }
+.requirement .quiet { font-size: .72rem; overflow-wrap: anywhere; }
+.task-body .eyebrow { overflow-wrap: anywhere; }
+@media (max-width: 1000px) {
+  .site-header nav button { padding: 10px; font-size: .73rem; }
+}
+@media (max-width: 650px) {
+  .pilot-intro { flex-direction: column; align-items: stretch; gap: 18px; }
+  .session-grid, .diagnosis-grid, .reflection-fields { grid-template-columns: 1fr; }
+  .session-card { padding: 22px; }
+  .session-card h4 { font-size: 1.5rem; }
+  .diagnostic-results { padding: 21px; }
+  .diagnostic-results h2 { font-size: 1.55rem; }
+  .curriculum-area > summary { align-items: start; flex-direction: column; gap: 10px; }
+  .curriculum-area { padding: 18px; }
+  .site-header nav button { padding: 10px 6px; font-size: .67rem; gap: 4px; }
+  .site-header nav button svg { width: 13px; }
+}
+@media print {
+  .parent-report .user-note { white-space: pre-wrap; }
+}

@@ -1,0 +1,22 @@
+@media print {
+  @page { size: A4; margin: 16mm; }
+  body { background: white !important; color: black !important; font-size: 11pt; }
+  .no-print, .skip-link { display: none !important; }
+  main { max-width: none !important; padding: 0 !important; margin: 0 !important; min-height: 0 !important; }
+  .report-page { max-width: none !important; margin: 0 !important; }
+  .print-only { display: block !important; }
+  .print-worksheet .parent-report { display: none !important; }
+  .print-report .worksheet { display: none !important; }
+  .worksheet h1 { font-size: 23pt; }
+  .worksheet h2 { font-size: 15pt; }
+  .worksheet-task { break-inside: avoid; padding-top: 5mm; }
+  .worksheet-task p { font-size: 11pt; }
+  .writing-space { height: 48mm; border-bottom: 1px solid #aaa; margin-bottom: 7mm; }
+  .parent-task { break-inside: avoid; border: 1px solid #999 !important; padding: 5mm !important; border-radius: 0 !important; background: white !important; }
+  .parent-task p, .solution-grid, .report-heading p, .badge { font-size: 10pt !important; color: black !important; }
+  .parent-task h3 { font-size: 15pt !important; }
+  .solution-grid { display: block !important; }
+  .solution-grid h4 { font-size: 11pt !important; }
+  .badge { background: white !important; }
+  .report-heading h2 { font-size: 18pt !important; }
+}

@@ -2,9 +2,9 @@
 
 Matematyczne przygody z kotami dla uczennicy przygotowującej się do egzaminu ósmoklasisty w 2027 roku.
 
-**Stan: dwutygodniowy pilot v0.2.0 zintegrowany lokalnie; nie jest pełnym repetytorium E8.**
+**Stan: dwutygodniowy pilot v0.2.0 opublikowany na Vercel; nie jest pełnym repetytorium E8.**
 
-Publiczna wcześniejsza wersja: [matematyka-e8-kappa.vercel.app](https://matematyka-e8-kappa.vercel.app/). Nowa wersja v0.2.0 jest przygotowywana lokalnie — ten adres nie potwierdza jej publikacji.
+Otwórz aplikację: **[matematyka-e8-kappa.vercel.app](https://matematyka-e8-kappa.vercel.app/)**. Wdrożenie pilota z commita `f52c06d` zakończyło się powodzeniem; pełny test przeglądarkowy przeszedł również pod tym publicznym adresem.
 
 ## Co już działa
 
@@ -97,15 +97,15 @@ Vercel poda adres wdrożenia. W **Project → Domains** znajdziesz stały adres 
 
 Przed wysłaniem zmian uruchom `npm test` i `npm run build`. W projekcie połączonym z GitHub push na `main` uruchomi wdrożenie. Przy publikacji ręcznej użyj `npx vercel --prod` w tym samym powiązanym katalogu.
 
-Przed aktualizacją warto pobrać kopię postępu. Lokalna wersja v0.2.0 migruje zapis prologu v1 do v2 zgodnie z opisem poniżej.
+Przed aktualizacją warto pobrać kopię postępu. Wersja v0.2.0 migruje zapis prologu v1 do v2 zgodnie z opisem poniżej.
 
 Publikowana jest wyłącznie zawartość `dist/`, bez wyników uczennicy. Fonty i ilustracja są częścią aplikacji; nie wymagają zewnętrznego serwisu fontów. Aplikacja nie ma jeszcze trybu offline — do jej wczytania potrzebny jest internet.
 
 ## Instrukcja dla córki i rodzica
 
-Poniższa instrukcja dotyczy lokalnego pilota v0.2.0.
+Poniższa instrukcja dotyczy pilota v0.2.0.
 
-1. Otwórz lokalny adres podany przez Vite w tej samej przeglądarce i profilu; najlepiej poza trybem prywatnym.
+1. Otwórz https://matematyka-e8-kappa.vercel.app/ w tej samej przeglądarce i profilu; najlepiej poza trybem prywatnym. Do pracy nad kodem możesz używać lokalnego adresu Vite.
 2. W zakładce „Pilot” ustaw „Początek pilota”. To data `pilotStart`, czyli dzień 0; bez jej ustawienia rozpoczęcie pierwszej sesji przyjmie bieżącą lokalną datę. Możesz ją później zmienić.
 3. Wybierz „Rozpocznij pilot”. Zacznij od diagnozy A i B: po 6 pytań, około 25 minut na część. Zatwierdź jedną odpowiedź albo wybierz „Nie wiem — pomiń zadanie”. Wskazówek nie ma; poprawność, sugestie i klucze pojawią się po obu częściach, także w dzienniku, widoku rodzica i wydrukach.
 4. Obliczenia i uzasadnienia zapisuj w zeszycie pod ID zadania. W aplikacji wpisuj sam wynik; ułamki przez `/`, bez jednostki. W przygodach i powtórkach możesz korzystać ze wskazówek. Użytą pomoc spoza aplikacji, np. klucz lub wsparcie rodzica, zaznacz odpowiednim polem.
@@ -121,7 +121,7 @@ Poniższa instrukcja dotyczy lokalnego pilota v0.2.0.
 
 1. Na dotychczasowym komputerze wybierz „Kopia postępu” → „Pobierz kopię”.
 2. Przenieś plik `.json` na drugi komputer, np. pendrivem.
-3. Otwórz tę samą wersję aplikacji na drugim komputerze i wybierz „Wczytaj kopię”. Kopię v2 przenoś do nowego pilota, nie do wcześniejszej wersji publicznej.
+3. Otwórz tę samą wersję aplikacji na drugim komputerze i wybierz „Wczytaj kopię”. Kopię v2 przenoś do pilota v0.2.0 lub nowszej zgodnej wersji.
 4. Sprawdź liczbę ukończonych etapów i datę. W razie potrzeby pobierz kopię aktualnego zapisu.
 5. Wybierz „Zastąp postęp kopią” i sprawdź dziennik.
 
@@ -165,4 +165,4 @@ Identyfikatory ukończonych zadań należy zachowywać. Istotna zmiana treści z
 
 ## Następny etap
 
-Publikacja nowej wersji, odbiór na docelowych przeglądarkach i pilot z córką. Dalej: dopasowanie trudności na podstawie obserwacji, rozbudowa szczegółowej matrycy i treści, długoterminowe powtórki oraz Detektyw błędów. Obecny pilot ma trzy zaplanowane powtórki z blokadą minimalnego odstępu; pełny zakres E8 i automatycznie adaptowany plan pozostają do zbudowania.
+Odbiór na docelowych przeglądarkach i pilot z córką. Dalej: dopasowanie trudności na podstawie obserwacji, rozbudowa szczegółowej matrycy i treści, długoterminowe powtórki oraz Detektyw błędów. Obecny pilot ma trzy zaplanowane powtórki z blokadą minimalnego odstępu; pełny zakres E8 i automatycznie adaptowany plan pozostają do zbudowania.

@@ -4,9 +4,8 @@
 Odbiorczyni: 14-latka. **8 sesji, 34 zadania, w tym 30 nowych i 4 istniejące z prologu.**
 Każde zadanie wymaga zapisu metody w zeszycie i jednej końcowej odpowiedzi liczbowej.
 
-**Stan: treści i UI pilota są zintegrowane lokalnie w zakresie przygotowywanego v0.2.0.**
-Wcześniejsza publiczna wersja jest pod https://matematyka-e8-kappa.vercel.app/;
-publikacja nowego pilota nie jest jeszcze potwierdzona.
+**Stan: pilot v0.2.0 opublikowany i sprawdzony pod publicznym adresem.**
+Aplikacja: https://matematyka-e8-kappa.vercel.app/.
 
 ## Plan i czas
 
@@ -250,7 +249,7 @@ Zachowanie tych ID jest istotne dla istniejących odwołań do zadań.
 ## Ograniczenia interpretacji i integracji
 
 Sesje, plan, diagnoza, blokady wskazówek i wyników, minimalny odstęp powtórek, dziennik,
-oceny rodzica, notatki, wydruki i zakładka „Zakres” są wdrożone lokalnie. `src/App.tsx`
+oceny rodzica, notatki, wydruki i zakładka „Zakres” są wdrożone na Vercel. `src/App.tsx`
 integruje `PilotDashboard`, `PuzzleCard`, widoki z `PilotReports` i `CurriculumView`.
 Pełny klucz w źródłach nie jest zabezpieczeniem przed jego podejrzeniem poza UI.
 Nie obiecujemy automatycznego sprawdzania metod ani wyniku E8. Plan ma stały zakres
@@ -267,4 +266,5 @@ ponieważ v1 nie znało momentu jej użycia.
 poprawny. Test przeglądarkowy na buildzie przeszedł wszystkie 34 zadania, ukrywanie
 wyników diagnozy, terminy powtórek i blokadę ich wydruku, notatki, punkty rodzica,
 migrację v1, kopie v2 oraz widok mobilny (macOS, Chromium 153.0.8010.12).
-Wdrożenie UI nie oznacza potwierdzonego odbioru z córką ani publikacji v0.2.0.
+Ten sam test przeszedł na publicznym wdrożeniu v0.2.0 z commita `f52c06d`.
+Wdrożenie UI i testy techniczne nie zastępują odbioru z córką.

@@ -4,12 +4,12 @@
 
 - Ten dokument określa aktualne ustalenia; `3-teaching-methods.md` pozostaje archiwum propozycji.
 - Zatwierdzone są kierunek nauki, harmonogram, model pracy i wybór technologii opisane poniżej.
-- **Zintegrowano lokalnie pilot przygotowywany jako v0.2.0:** 8 sesji, 34 zadania, diagnoza 2 × 6 pytań po 25 minut, 3 przygody i 3 powtórki, zapis v2, kopie, ręczna ocena rodzica, notatki i druk.
+- **Opublikowano pilot v0.2.0:** 8 sesji, 34 zadania, diagnoza 2 × 6 pytań po 25 minut, 3 przygody i 3 powtórki, zapis v2, kopie, ręczna ocena rodzica, notatki i druk.
 - Weryfikacja: **179 zaliczonych testów**, poprawny build produkcyjny i test całego pilota w Chromium. Szczegóły w sekcji 11.
 - Zakładka „Zakres” i matryca istnieją: 29 działów, 36 zweryfikowanych podpunktów i mapowanie wszystkich 34 zadań na 23 częściowo ćwiczone punkty. Pozostałe 125 z 161 punktów podstawy nie mają szczegółowego odwzorowania.
 - Test z córką, odbiór na docelowych przeglądarkach, pełna zawartość i Detektyw błędów pozostają do wykonania.
 - **Pełny zakres E8 nie jest jeszcze pokryty ani zweryfikowany.**
-- Hosting: Vercel, repozytorium `Bredson/matematyka-e8`, gałąź produkcyjna `main`. Publiczna wcześniejsza wersja: https://matematyka-e8-kappa.vercel.app/. **v0.2.0 przygotowujemy lokalnie; jej publikacja nie jest potwierdzona.**
+- Hosting: Vercel, repozytorium `Bredson/matematyka-e8`, gałąź produkcyjna `main`. Publiczny pilot v0.2.0: https://matematyka-e8-kappa.vercel.app/. Publikacja i test publicznej wersji potwierdzone.
 - Poniżej oddzielono aktualny pilot od docelowej rozbudowy; instrukcja obsługi i lista gotowych możliwości są w `README.md`.
 
 ## 2. Uczennica i cel
@@ -52,7 +52,7 @@
 - Rodzic wspiera pytaniami i rozmową o postępie; udzieloną pomoc także odnotowujemy.
 - Papierowy zapis rozwiązania pozostaje w zeszycie; nie zakładamy skanowania ani przesyłania zdjęć.
 
-## 5. Od prototypu v0.1.0 do lokalnego pilota v0.2.0
+## 5. Od prototypu v0.1.0 do pilota v0.2.0
 
 Prototyp v0.1.0 obejmował jedną przygodę: 3 zadania i transfer, zapis, kopie, ocenę rodzica oraz druk. Jest zachowany jako `prolog` z ID `mapa`, `latarnie`, `sklepik`, `bilet`. Lokalny pilot dodaje 30 nowych zadań, zachowując treści prologu oraz zgodność jego odpowiedzi, ocen i dat.
 
@@ -134,7 +134,7 @@ Daty i czasy są orientacyjne. Zwykłych sesji nie blokuje przyszła data planu.
 | --- | --- | --- |
 | 1. Matryca oficjalnych wymagań | Częściowa matryca gotowa: 29 działów, 36 punktów, mapowanie 34 zadań | Dla pełnego kursu: dalsze odwzorowanie 125 punktów i uzupełnianie jawnych luk. |
 | 2. Działająca przygoda | Prolog v0.1.0 zachowany w pilocie; wcześniejsza wersja publiczna | Kontrola na Windowsie i odbiór z córką nadal wymagane. |
-| 3. Przygotowanie dwutygodniowego pilota | Lokalna v0.2.0 przeszła testy jednostkowe, build i E2E | Publikacja oraz odbiór na Windowsie z córką. |
+| 3. Przygotowanie dwutygodniowego pilota | v0.2.0 opublikowana; testy jednostkowe, build i publiczne E2E zaliczone | Odbiór na Windowsie z córką. |
 | 4. Test z córką podczas pilota | Planowany | Zebrane wyniki diagnozy, transferu i powtórek oraz uwagi o motywacji i obsłudze. |
 | 5. Rozszerzenie na cały zakres | Planowane | Uzupełniona matryca pokrycia, zweryfikowane zadania i działające powtórki. |
 | 6. Detektyw błędów | Planowany na luty–marzec 2027 | Gotowe sprawy, klucze i nowe zadania sprawdzające naprawę wykrytych luk. |
@@ -165,13 +165,13 @@ Daty i czasy są orientacyjne. Zwykłych sesji nie blokuje przyszła data planu.
 
 ## 11. Stan dowodów i ryzyka
 
-### Aktualny zakres v0.2.0 — lokalna integracja
+### Aktualny zakres v0.2.0 — wdrożenie produkcyjne
 
 - **`npm test`: 179 testów zaliczonych** — odpowiedzi, niezależny klucz zadań, mapowanie, migracja, integralność kopii, terminy i ukrywanie wyników.
 - **Build:** końcowe `npm run build` zakończone powodzeniem (TypeScript + Vite 8.3.0).
 - **E2E:** `tests/browser_smoke.py` przeszedł na buildzie produkcyjnym pod lokalnym `vite preview`, macOS, Chromium 153.0.8010.12. Sprawdzono wszystkie 34 zadania, limit i pomijanie diagnozy, brak wczesnych wyników/kluczy, dostępność powtórek również w druku, notatki, punkty rodzica, migrację rzeczywistego zapisu v1 i nienaruszenie starego klucza, import/eksport v2, błędne kopie, brak miejsca w storage, konflikt kart, odrzucenie pięciocyfrowego roku i ekran 390 px. Zrzuty: `test-results/` (poza Git).
 - **Treści i zakres:** `docs/PILOT_CONTENT.md` zawiera niezależnie przeliczony klucz 30 nowych zadań i kontrolę prologu. `docs/CURRICULUM.md` dokumentuje źródła, 29 działów, 36 punktów oraz audyt i dokładne mapowanie 34 zadań na 23 częściowo ćwiczone punkty.
-- **Publikacja:** wcześniejsza wersja jest pod https://matematyka-e8-kappa.vercel.app/. Publikacja lokalnego v0.2.0 nie jest potwierdzona; instrukcje są w `README.md`.
+- **Publikacja:** commit `f52c06d6ee2ddc998d3f89e87030cfaf0d03dca6`, GitHub deployment `6481774206` (Production), status Vercel `success`. Publiczny adres: https://matematyka-e8-kappa.vercel.app/. Test `tests/browser_smoke.py` uruchomiony pod tym adresem przeszedł wszystkie 34 zadania, diagnozę, powtórki, migrację, kopie, druk i widok mobilny w odrębnych profilach Chromium 153.0.8010.12.
 - **Metadane wydania:** `package.json` i `package-lock.json` deklarują `0.2.0`.
 - Brak potwierdzonego odbioru nowego pilota na Windowsie oraz wyników pracy z córką. Do zebrania: odbiór i obserwacje pilota, a następnie decyzje o rozbudowie.
 
